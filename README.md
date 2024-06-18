@@ -38,3 +38,7 @@ Output: 224 bit message digest
 Input : 512*n bit message block  
 Output: 256 bit message digest
 
+## How to use
+```shell
+./mySHA2 "SHA***" "~"
+```
