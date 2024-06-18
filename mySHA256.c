@@ -176,6 +176,7 @@ unsigned *data2message(unsigned *data, unsigned byte_size, int mode){
     return makeMessage(fixData, byte_size, mode);
 }
 
+#if 0
 int main(void) {
     /*Test Text*/
     //char src[256] = "Visual Studio drives me crazy and I am suspecting I am doing something wrong. This is what I do: I installed Visual Studio(Pro '08) a long time ago, I installed the Windows SDK (Win 7 x64), someone emails me a project, it fails to build.";
@@ -218,21 +219,6 @@ int main(void) {
 
     puts("-------------------------------");
 
-#if 0
-    SHA256_STEP V;
-    init256STEP(&V);    
-    for(int i=0;i<36;i++){
-        printf("%08x ",V.a[i]);
-        printf("%08x ",V.b[i]);
-        printf("%08x ",V.c[i]);
-        printf("%08x ",V.d[i]);
-        printf("%08x ",V.e[i]);
-        printf("%08x ",V.f[i]);
-        printf("%08x ",V.g[i]);
-        printf("%08x ",V.h[i]);
-        puts("");
-    }
-#endif
     //SHA's test vector file
     //**Len: bit length**
     
@@ -280,5 +266,5 @@ int main(void) {
     for(int i=0; i<8; i++) printf("%08x", dataHash[i]);
     puts("");
     free(dataMB);   
-
 }
+#endif
