@@ -19,12 +19,11 @@ static char *Cond5 = "SHA512/224";
 static char *Cond6 = "SHA512/256";
 
 int main(int argc, char **argv){
-    /**/
     if (argc == 1) { 
         printf("This program is my SHA-2 implementation.\n");
         exit(0);
     }
-    
+    /**/
     if(strcmp(argv[1],Cond1)==0){
         fprintf(stderr,"Not ready function.\n");
         exit(1);
@@ -38,7 +37,6 @@ int main(int argc, char **argv){
     else if(strcmp(argv[1],Cond3)==0){
         fprintf(stderr,"Not ready function.\n");
         exit(1);
-    
     }
     
     else if(strcmp(argv[1],Cond4)==0){
@@ -61,6 +59,24 @@ int main(int argc, char **argv){
         exit(1);
     }
 
+    /*File option*/
+    /*
+    if(argv[2][0] == '-'){
+        switch((argv[2][1])){
+            case 'f':
+                
+                break;
+            case 'v':
+
+                break;
+            default:
+                fprintf(stderr,"Option Error.\n");
+                exit(1);
+        }
+            
+    }
+    
+    */
 
     char src[256];
     //init
