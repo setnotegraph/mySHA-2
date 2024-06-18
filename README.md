@@ -10,7 +10,7 @@ This repository is my SHA-2 implementation.
 * mySHA512/224
 * mySHA512/256
 
-##string2messageblock
+## string2messageblock
 Input : char array  
 Output: 256*n or 512*n padding message block
 
