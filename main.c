@@ -1,11 +1,71 @@
+/*
+  Auther: setnotegraph
+  Status: Undone
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "mySHA256.h"
-#define ENDIAN 0
 
-int main(int argc, char **argv){ 
+#define ENDIAN 0
+#define DEBUG  1
+
+
+static char *Cond1 = "SHA224";
+static char *Cond2 = "SHA256";
+static char *Cond3 = "SHA384"; 
+static char *Cond4 = "SHA512";
+static char *Cond5 = "SHA512/224";
+static char *Cond6 = "SHA512/256";
+
+int main(int argc, char **argv){
+    /**/
+    if (argc == 1) { 
+        printf("This program is my SHA-2 implementation.\n");
+        exit(0);
+    }
+    
+    if(strcmp(argv[1],Cond1)==0){
+        fprintf(stderr,"Not ready function.\n");
+        exit(1);
+
+    }
+
+    else if(strcmp(argv[1],Cond2)==0){
+        printf("%s is ready.\n",argv[1]);    
+    }
+    
+    else if(strcmp(argv[1],Cond3)==0){
+        fprintf(stderr,"Not ready function.\n");
+        exit(1);
+    
+    }
+    
+    else if(strcmp(argv[1],Cond4)==0){
+        fprintf(stderr,"Not ready function.\n");
+        exit(1);
+    }
+
+    else if(strcmp(argv[1],Cond5)==0){
+        fprintf(stderr,"Not ready function.\n");
+        exit(1);
+    }
+    
+    else if(strcmp(argv[1],Cond6)==0){
+        fprintf(stderr,"Not ready function.\n");
+        exit(1);
+    }
+
+    else{
+        fprintf(stderr,"Invalid command.\n");
+        exit(1);
+    }
+
+
     char src[256];
+    //init
+    for(int i=0; i<256; i++) src[i] = 0;
+
     /*Test Text*/
     //char src[256] = "Visual Studio drives me crazy and I am suspecting I am doing something wrong. This is what I do: I installed Visual Studio(Pro '08) a long time ago, I installed the Windows SDK (Win 7 x64), someone emails me a project, it fails to build.";
     //char src[256] = "The quick brown fox jumps over the lazy dogs. This sentence is one of the English pangrams, and is often used for typing and computer keyboard tests.";
@@ -26,7 +86,7 @@ int main(int argc, char **argv){
     //26+26+1234
     //char src[256] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234";
     // desired output:b1c20ba49d3374f82bd624b2896c2096b48e83192fa3d062c7e5716ceea7421c
-    for(int i=0; i<256; i++) src[i] = argv[1][i];
+    if(argc > 2) for(int i=0; i<256; i++) src[i] = argv[2][i];
     int src_s = strlen(src);
     
     unsigned int *stringMB;    
