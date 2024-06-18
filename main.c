@@ -8,7 +8,7 @@
 #include "mySHA256.h"
 
 #define ENDIAN 0
-#define DEBUG  1
+#define DEBUG  0
 
 
 static char *Cond1 = "SHA224";
@@ -72,19 +72,17 @@ int main(int argc, char **argv){
     unsigned int *stringMB;    
     int message_size = ((((src_s/4)+1)+1)/16)*16+16;
     stringMB = string2message(src, src_s, ENDIAN);
-
+#if DEBUG
     for(int i=0; i<(message_size); i++){
         if((i%16)==0) printf("\n%d\n",i/16);
         printf("0x%08x ", stringMB[i]);
     }
     puts("");
+#endif
     unsigned int H[8];
     mySHA256(stringMB,src_s,H);
     for(int i=0; i<8; i++) printf("%08x", H[i]);
     puts("");
-    puts("");
     free(stringMB);
-
-    puts("-------------------------------");
     return 0;
 }

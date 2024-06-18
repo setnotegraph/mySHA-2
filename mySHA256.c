@@ -102,10 +102,6 @@ unsigned int mySHA256(unsigned *M, int src_size, unsigned *O){
         O[5] += f;
         O[6] += g;
         O[7] += h;
-        
-        printf("Time %d:", i);
-        for(int k=0; k<8; k++) printf("%08x ", O[k]);
-        puts("");
     }
     return 0;
 }
