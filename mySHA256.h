@@ -27,9 +27,6 @@ unsigned int conv(unsigned int x);
 unsigned int mySHA256(unsigned *M, int src_size, unsigned *O);
 
 //Temp
-unsigned *makeMessage(unsigned *data, int byte_size, int mode);
-unsigned *string2message(char *str, int str_size, int mode);
-unsigned *data2message(unsigned *data, unsigned byte_size, int mode);
 
 // Declear Variables
 static unsigned int mySHA256IV[8] = {0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19};

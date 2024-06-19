@@ -1,6 +1,6 @@
 CC 			= gcc
 CFLAGS 	= -O4 -Wall
-OBJS 		= main.o mySHA256.o
+OBJS 		= main.o mySHA256.o mySHA2gen.o
 PROGRAM = mySHA2
 
 all: 				$(PROGRAM)
