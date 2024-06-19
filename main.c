@@ -97,10 +97,12 @@ int main(int argc, char **argv){
         else break;
     }
     
+    /*src: input data, MB:message size*/
     char src[256];
     int src_s;
     unsigned int *MB;
     
+
     /*Read File*/
     if(File==1){
        fprintf(stderr, "Sorry, Not make yet.\n");
