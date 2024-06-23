@@ -6,9 +6,9 @@ This repository is my SHA-2 implementation.
 ## probrem
 If String is nothing, causes segmentation fault.
 
-"""bash
+```bash
 ./mySHA2 [SHA***] [-f] ["Nothing"]
-"""
+```
 
 ## Functions
 * string2messageblock
