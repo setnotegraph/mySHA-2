@@ -49,5 +49,5 @@ Output: 256 bit message digest
 
 ## How to use
 ```shell
-./mySHA2 "SHA***" "~"
+./mySHA2 [SHA***] [option] [file or string]
 ```
