@@ -1,6 +1,15 @@
 # mySHA-2
 This repository is my SHA-2 implementation.
 
+## Status: undone
+
+## probrem
+If String is nothing, causes segmentation fault.
+
+"""bash
+./mySHA2 [SHA***] [-f] ["Nothing"]
+"""
+
 ## Functions
 * string2messageblock
 * mySHA224
