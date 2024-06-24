@@ -1,7 +1,18 @@
 # mySHA-2
 This repository is my SHA-2 implementation.
 
-## Status: undone
+## Status
+|Target       |Status|
+|:------------|:----:|
+|ALL SHA-2    |X     |
+|SHA-256      |O     |
+|SHA-512      |X     |
+|SHA-224      |X     |
+|SHA-384      |X     |
+|SHA-512/224  |X     |
+|SHA-512/256  |X     |
+|Handle File  |X     |
+|Handle String|O     |
 
 ## probrem
 If String is nothing, causes segmentation fault.
